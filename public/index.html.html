@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis City: The Future of Sustainable Living</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar for aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f0f2f5;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #6b7280;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4b5563;
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-lg fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-extrabold text-blue-600 hover:text-blue-800 transition-colors duration-300">Oasis City</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#vision" class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Vision</a>
+                <a href="#challenges" class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Challenges</a>
+                <a href="#solutions" class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Solutions</a>
+                <a href="#technology" class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Technology</a>
+                <a href="#gallery" class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Gallery</a>
+                <a href="#plan" class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Project Plan</a>
+                <a href="#qna" class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Q&A</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <a href="#vision" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Vision</a>
+            <a href="#challenges" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Challenges</a>
+            <a href="#solutions" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Solutions</a>
+            <a href="#technology" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Technology</a>
+            <a href="#gallery" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Gallery</a>
+            <a href="#plan" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Project Plan</a>
+            <a href="#qna" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Q&A</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-20"> <!-- Padding to account for fixed header -->
+
+        <!-- Hero Section -->
+        <section id="hero" class="relative bg-gradient-to-br from-blue-700 to-teal-500 text-white py-20 md:py-32 overflow-hidden rounded-bl-3xl rounded-tr-3xl shadow-xl">
+            <div class="absolute inset-0 z-0 opacity-10">
+                <img src="https://placehold.co/1920x1080/0d6efd/ffffff?text=Oasis+City+Concept" alt="Abstract desert background" class="w-full h-full object-cover">
+            </div>
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                    Oasis City: The Future of Sustainable Living
+                </h1>
+                <p class="text-lg md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in-up">
+                    A self-sustaining paradise nestled within a desert, enclosed by colossal walls, featuring lush forests, cascading waterfalls, and architecture that blends seamlessly with nature.
+                </p>
+                <a href="#vision" class="inline-block bg-white text-blue-700 hover:bg-gray-100 hover:text-blue-900 font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 animate-bounce-in">
+                    Explore the Vision
+                </a>
+            </div>
+        </section>
+
+        <!-- Vision & Executive Summary -->
+        <section id="vision" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Our Vision: A Living Biosphere</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            'Oasis City' is envisioned as a global benchmark for sustainable, biophilic urbanism, a self-contained paradise meticulously integrated within a desert environment. This groundbreaking development will harmonize human habitation with thriving natural ecosystems, encapsulated within a protective, multi-functional wall structure. It represents a profound commitment to advanced engineering, ecological innovation, and human ingenuity, demonstrating a new paradigm for resilient urban living in extreme climates.
+                        </p>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            This project directly aligns with the UAE's forward-thinking national agendas, including the Dubai Economic Agenda D33, the UAE Tourism Strategy 2031, and the Dubai 2040 Urban Master Plan. By fostering profound economic diversification, attracting global talent and high-value tourism, and pioneering sustainable urban development models, 'Oasis City' will reinforce the UAE's position as a global leader in innovation and future-ready societies.
+                        </p>
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-2xl">
+                        <img src="https://placehold.co/800x600/a78bfa/ffffff?text=Oasis+City+Concept+Art" alt="Oasis City Concept Art" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Imperative & Regional Precedents -->
+        <section id="introduction" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">The Global Imperative & Lessons Learned</h2>
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        The rapid pace of global urbanization presents an urgent demand for innovative urban planning, particularly in regions with harsh environmental conditions. 'Oasis City' is designed to meet this challenge head-on, transitioning away from energy- and land-intensive models towards truly sustainable alternatives.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Lessons from Masdar City & NEOM:</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        We have meticulously studied regional precedents like Masdar City and NEOM's 'The Line'. While groundbreaking, their journeys highlight critical lessons: the importance of resilience, adaptability, and a pragmatic, iterative approach to technology. Our definition of "sustainable" is not a static target, but a continuous process of optimization, integration of emerging solutions, and strategic retrofitting.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 text-lg leading-relaxed mb-6 space-y-2">
+                        <li>**Masdar City:** Demonstrated impressive reductions in resource consumption (57% waste, 31% electricity, 18% water) and championed passive design. Challenges included attracting residents and the pragmatism of revising a "zero-carbon" goal to "low-carbon."</li>
+                        <li>**NEOM's The Line:** Showcased ambitious scale but faced significant geotechnical challenges, cost overruns, and revised population targets, emphasizing the need for robust feasibility and phased development.</li>
+                    </ul>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        These insights inform our dynamic, adaptive strategy, ensuring 'Oasis City' is built for long-term evolution and resilience.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conceptual Framework: Biophilic Urbanism -->
+        <section id="framework" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Conceptual Framework: Biophilic Urbanism & Integrated Design</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md border border-gray-200">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">The Walled City Concept</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Our "huge walls" are multi-functional, integrated elements vital to the city's climate control, resource management, and aesthetic identity. They incorporate advanced building envelope technologies, potentially housing vertical farming modules, renewable energy systems, and water collection.
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md border border-gray-200">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Biophilic Design Principles</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            'Oasis City' is meticulously designed around biophilic principles, enhancing human well-being, creativity, and connection with nature. This includes maximizing visual connection, presence of water, thermal variability, dynamic lighting, biomorphic forms, and natural material use.
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md border border-gray-200">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Integrated Urban Planning</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            The city's internal layout prioritizes walkability, featuring networks of small parks and plazas with clever passive design techniques to provide comfortable outdoor areas, fostering a vibrant, accessible, and comfortable living environment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges Section -->
+        <section id="challenges" class="py-16 md:py-24 bg-red-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-red-800 text-center mb-12">Anticipating Challenges</h2>
+                <p class="text-red-700 text-lg leading-relaxed text-center mb-10 max-w-3xl mx-auto">
+                    Building a city of this magnitude in a desert environment presents unique technical and logistical hurdles. Our plan addresses these proactively.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-red-200">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Water Scarcity & Management</h3>
+                        <p class="text-gray-700">Maintaining a vast internal ecosystem in a desert environment requires immense and constant water supply, preventing evaporation, and managing wastewater efficiently.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-red-200">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Climate Control</h3>
+                        <p class="text-gray-700">Creating and maintaining a temperate, humid microclimate suitable for forests and waterfalls within a scorching desert, and preventing heat ingress through the walls.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-red-200">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Energy Demands</h3>
+                        <p class="text-gray-700">Meeting the enormous energy demands for climate control, water management, lighting, and all city operations sustainably and reliably.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-red-200">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Structural Integrity</h3>
+                        <p class="text-gray-700">Designing and constructing colossal walls and structures that can withstand desert winds, sandstorms, temperature extremes, and the pressure of containing an ecosystem.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-red-200">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Ecological Balance</h3>
+                        <p class="text-gray-700">Establishing and maintaining a diverse, self-sustaining ecosystem of plants, animals, and microorganisms in an artificial, enclosed environment.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-red-200">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Waste & Resource Cycling</h3>
+                        <p class="text-gray-700">Achieving a near-zero-waste system and ensuring sustainable resource utilization through circular economy principles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Section -->
+        <section id="solutions" class="py-16 md:py-24 bg-green-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-green-800 text-center mb-12">Innovative Solutions</h2>
+                <p class="text-green-700 text-lg leading-relaxed text-center mb-10 max-w-3xl mx-auto">
+                    We leverage cutting-edge technologies and integrated design philosophies to transform challenges into opportunities for innovation.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-green-200">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Water Solutions</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Advanced Water Recycling (MBR+RO)</li>
+                            <li>Atmospheric Water Generation (AWG)</li>
+                            <li>Evaporation Control (Underground Storage, Films)</li>
+                            <li>Smart Irrigation</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-green-200">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Climate Solutions</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Advanced Building Envelopes</li>
+                            <li>Integrated HVAC & Passive Design</li>
+                            <li>Large-Scale Geothermal Cooling</li>
+                            <li>Strategic Shading & Airflow</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-green-200">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Energy Solutions</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Hybrid Renewable Energy (Solar, Wind)</li>
+                            <li>Advanced Energy Storage (Organic SolidFlow Batteries, SGES)</li>
+                            <li>Smart Grid Integration</li>
+                            <li>Waste-to-Energy Systems</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-green-200">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Construction Solutions</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Modular Construction</li>
+                            <li>Ultra-High-Performance Concrete (UHPC)</li>
+                            <li>Deep Foundations & Geotechnical Monitoring</li>
+                            <li>Integrated Structural Health Monitoring (SHM)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-green-200">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Ecological Solutions</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Vertical Farming & Aquaponics</li>
+                            <li>Ecological Engineering for Habitats</li>
+                            <li>AI for Biodiversity Monitoring</li>
+                            <li>Gene Editing for Plant Resilience</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-green-200">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Waste & Air Quality Solutions</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Circular Economy Principles</li>
+                            <li>AI-driven Waste Sorting & Anaerobic Digestion</li>
+                            <li>Nutrient Recycling</li>
+                            <li>Advanced Air Purification Systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Technology Section -->
+        <section id="technology" class="py-16 md:py-24 bg-purple-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-purple-800 text-center mb-12">Cutting-Edge Technologies</h2>
+                <p class="text-purple-700 text-lg leading-relaxed text-center mb-10 max-w-3xl mx-auto">
+                    'Oasis City' will be a living laboratory, integrating state-of-the-art technologies for unparalleled sustainability and quality of life.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="bg-white p-8 rounded-xl shadow-md border border-purple-200 flex items-start space-x-4">
+                        <svg class="w-10 h-10 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-2">Hyperloop / Maglev Transportation</h3>
+                            <p class="text-gray-700 leading-relaxed">High-speed, eco-friendly transit systems will connect different zones within the city and to external hubs, minimizing reliance on traditional vehicles and maximizing efficiency.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md border border-purple-200 flex items-start space-x-4">
+                        <svg class="w-10 h-10 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 7h14c2.209 0 4 1.791 4 4v4c0 2.209-1.791 4-4 4H5c-2.209 0-4-1.791-4-4v-4c0-2.209 1.791-4 4-4z"></path></svg>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-2">Bioluminescent Lighting</h3>
+                            <p class="text-gray-700 leading-relaxed">Genetically engineered bio-luminescent plants or fungi will provide soft, natural ambient lighting in public spaces, drastically reducing energy consumption and light pollution.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md border border-purple-200 flex items-start space-x-4">
+                        <svg class="w-10 h-10 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3m0 0l3-3m-3 3v4m6 10H6a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2z"></path></svg>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-2">AI-Powered City Management</h3>
+                            <p class="text-gray-700 leading-relaxed">Advanced AI will optimize resource distribution, manage environmental controls, monitor biodiversity, and enhance public services, creating an intelligently responsive urban ecosystem.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md border border-purple-200 flex items-start space-x-4">
+                        <svg class="w-10 h-10 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.209 1.791 4 4 4h8c2.209 0 4-1.791 4-4V7m-4 0v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2m8 0H6m-2 0h12"></path></svg>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-2">Advanced Materials Science</h3>
+                            <p class="text-gray-700 leading-relaxed">Utilization of self-healing concrete, temperature-regulating coatings, and carbon-negative building materials to enhance durability, reduce environmental impact, and optimize performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery Section -->
+        <section id="gallery" class="py-16 md:py-24 bg-gray-200">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Visualizing Oasis City</h2>
+                <p class="text-gray-700 text-lg leading-relaxed text-center mb-10 max-w-3xl mx-auto">
+                    Witness the harmonious blend of nature, advanced technology, and vibrant life within the walls of Oasis City.
+                </p>
+                <div class="flex justify-center items-center h-96 bg-gray-100 rounded-xl shadow-inner border border-gray-300">
+                    <div id="imageLoader" class="loader hidden"></div>
+                    <img id="cityImage" src="" alt="Oasis City Concept Image" class="max-w-full max-h-full rounded-lg shadow-lg object-contain hidden" onerror="this.onerror=null;this.src='https://placehold.co/800x600/cccccc/ffffff?text=Image+Load+Error';">
+                    <p id="imageError" class="text-red-600 hidden">Failed to load image. Please try again.</p>
+                    <button id="generateImageBtn" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-xl shadow-md hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+                        Generate City Image
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Project Plan Section -->
+        <section id="plan" class="py-16 md:py-24 bg-blue-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-blue-800 text-center mb-12">Our Strategic Project Plan</h2>
+                <p class="text-blue-700 text-lg leading-relaxed text-center mb-10 max-w-3xl mx-auto">
+                    A meticulous, phased approach ensuring feasibility, sustainability, and alignment with the UAE's national vision for global leadership.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Alignment with UAE National Vision</h3>
+                        <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-2 mb-6">
+                            <li>Directly supports **Dubai Economic Agenda D33** for economic diversification and high-tech growth.</li>
+                            <li>Significant contribution to **UAE Tourism Strategy 2031** as a unique, eco-tourism destination.</li>
+                            <li>Embodies principles of **Dubai 2040 Urban Master Plan** for quality of life and green spaces.</li>
+                            <li>Positions UAE as a global leader in sustainable urbanization and innovation.</li>
+                        </ul>
+
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Economic Impact & Value Proposition</h3>
+                        <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-2">
+                            <li>**Job Creation:** Substantial employment across construction, tech, ecology, and tourism.</li>
+                            <li>**Attracting Global Talent:** A magnet for leading scientists, engineers, and innovators.</li>
+                            <li>**New Economic Sectors:** Fosters industries in sustainable tech, advanced agriculture, and eco-tourism.</li>
+                            <li>**Long-Term Resilience:** Reduced operational costs and external dependencies through self-sufficiency.</li>
+                        </ul>
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-2xl">
+                        <img src="https://placehold.co/800x600/0d6efd/ffffff?text=Project+Timeline+Graph" alt="Project Timeline Graph" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Key Project Phases:</h3>
+                    <ol class="list-decimal list-inside text-gray-700 leading-relaxed space-y-2 inline-block text-left">
+                        <li>**Phase 1: Feasibility and Master Planning (1-2 years)** - Comprehensive studies, detailed design, initial approvals.</li>
+                        <li>**Phase 2: Infrastructure and Wall Construction (5-7 years)** - Foundational infrastructure, colossal enclosing walls, primary plants.</li>
+                        <li>**Phase 3: Internal Ecosystem & Core City Development (8-10 years)** - Forests, waterfalls, core urban areas, initial population.</li>
+                        <li>**Phase 4: Full Community Rollout & Refinement (Ongoing)** - Population growth, expansion, continuous optimization.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI-Powered Q&A Section -->
+        <section id="qna" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">✨ Ask Oasis City AI ✨</h2>
+                <p class="text-gray-700 text-lg leading-relaxed text-center mb-10 max-w-3xl mx-auto">
+                    Have a question about Oasis City? Our AI assistant can provide insights based on the project details!
+                </p>
+
+                <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div class="mb-6">
+                        <label for="questionInput" class="block text-lg font-medium text-gray-700 mb-2">Your Question:</label>
+                        <textarea id="questionInput" rows="4" class="block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-base outline-none transition-colors duration-200" placeholder="e.g., How will water be managed in Oasis City?"></textarea>
+                    </div>
+                    <button id="getAnswerBtn" class="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl shadow-md hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 flex items-center justify-center">
+                        <span id="buttonText">Get Answer</span>
+                        <div id="qnaLoadingIndicator" class="loader ml-3 hidden"></div>
+                    </button>
+
+                    <div id="answerContainer" class="mt-8 p-6 bg-blue-50 rounded-lg shadow-inner border border-blue-200 hidden">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-4">AI's Answer:</h3>
+                        <p id="oasisAnswer" class="text-gray-800 leading-relaxed"></p>
+                    </div>
+                    <div id="qnaErrorMessage" class="text-red-600 mt-4 text-center hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section id="conclusion" class="py-16 md:py-24 bg-gradient-to-br from-blue-700 to-teal-500 text-white rounded-tr-3xl rounded-bl-3xl shadow-xl">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">A Legacy for Generations</h2>
+                <p class="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
+                    'Oasis City' is more than just a city; it is a living testament to humanity's ability to thrive in harmony with nature, even in the harshest environments. It is a strategic imperative for the UAE to solidify its position as a global leader in future-forward initiatives, shaping a new era of sustainable urban development.
+                </p>
+                <p class="text-lg md:text-xl font-semibold">
+                    With visionary leadership, we can build this paradise.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8">Contact Us</h2>
+                <p class="text-gray-700 text-lg mb-6">
+                    Interested in learning more or collaborating on this groundbreaking project?
+                </p>
+                <a href="mailto:info@oasis.city" class="inline-block bg-blue-600 text-white hover:bg-blue-700 font-semibold py-3 px-8 rounded-full shadow-md transition-all duration-300 transform hover:scale-105">
+                    Email Our Team
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Oasis City. All rights reserved.</p>
+            <p class="text-sm mt-2">Built with a vision for a sustainable future.</p>
+        </div>
+    </footer>
+
+    <!-- 
+        ============================================================
+        SECURE AND FUNCTIONAL JAVASCRIPT
+        This script communicates with your server.js backend.
+        IT DOES NOT CONTAIN ANY API KEYS.
+        ============================================================
+    -->
+    <script>
+        // Smooth scrolling and mobile menu functionality
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        
+        // --- Image Generation Functionality ---
+        const generateImageBtn = document.getElementById('generateImageBtn');
+        const cityImage = document.getElementById('cityImage');
+        const imageLoader = document.getElementById('imageLoader');
+        const imageError = document.getElementById('imageError');
+
+        generateImageBtn.addEventListener('click', async () => {
+            imageLoader.classList.remove('hidden');
+            generateImageBtn.classList.add('hidden');
+            cityImage.classList.add('hidden');
+            imageError.classList.add('hidden');
+
+            const imagePrompt = "A unique community city in the middle of a vast golden desert, enclosed by massive, futuristic walls. Inside the walls, there is a lush, vibrant green forest with diverse trees, beautiful gardens, and realistic artificial waterfalls. Buildings are organically shaped, blending with the environment. Advanced technology like transparent solar panels and eco-friendly transport is visible. Animals roam freely with people, showing human-animal coexistence. Wide shot showing the contrast between the arid desert outside and the flourishing paradise within.";
+
+            try {
+                // This calls your secure server endpoint
+                const response = await fetch('/api/generate-image', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ prompt: imagePrompt })
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.error || `Server responded with status ${response.status}`);
+                }
+                
+                // Using the placeholder URL from the server for this demo
+                cityImage.src = result.placeholder;
+                cityImage.classList.remove('hidden');
+
+            } catch (error) {
+                console.error('Error generating image:', error);
+                imageError.textContent = `Demo Error: ${error.message}. Please try again.`;
+                imageError.classList.remove('hidden');
+            } finally {
+                imageLoader.classList.add('hidden');
+                // We don't make the button visible again to prevent spamming in this demo
+            }
+        });
+
+        // --- AI-Powered Q&A Functionality ---
+        const getAnswerBtn = document.getElementById('getAnswerBtn');
+        const questionInput = document.getElementById('questionInput');
+        const oasisAnswer = document.getElementById('oasisAnswer');
+        const qnaLoadingIndicator = document.getElementById('qnaLoadingIndicator');
+        const buttonText = document.getElementById('buttonText');
+        const answerContainer = document.getElementById('answerContainer');
+        const qnaErrorMessage = document.getElementById('qnaErrorMessage');
+
+        getAnswerBtn.addEventListener('click', async () => {
+            const question = questionInput.value.trim();
+            if (!question) {
+                qnaErrorMessage.textContent = "Please enter a question.";
+                qnaErrorMessage.classList.remove('hidden');
+                return;
+            }
+
+            // Set loading state
+            answerContainer.classList.add('hidden');
+            qnaErrorMessage.classList.add('hidden');
+            qnaLoadingIndicator.classList.remove('hidden');
+            buttonText.textContent = "Getting Answer...";
+            getAnswerBtn.disabled = true;
+
+            // This detailed context is sent to the server, so the AI knows about the project
+            const websiteContentContext = `
+                Oasis City is a self-sustaining city in a desert, enclosed by huge multi-functional walls. It features a forest, waterfalls, and biophilic architecture. It is aligned with UAE's national agendas like Dubai D33 and the 2040 Urban Master Plan.
+                Key challenges it solves are: Water Scarcity (using MBR+RO recycling, AWG), Climate Control (geothermal, advanced envelopes), Energy Demands (hybrid renewables, advanced storage), Structural Integrity (UHPC, modular construction), Ecological Balance (vertical farming, AI monitoring), and Waste Management (circular economy, anaerobic digestion).
+                It uses technologies like Hyperloop, bioluminescent lighting, AI-powered city management, and advanced materials science.
+                The project is planned in four phases: Feasibility, Infrastructure/Wall construction, Ecosystem/Core City development, and Full Rollout.
+            `;
+
+            try {
+                // This calls your secure server endpoint
+                const response = await fetch('/api/generate-answer', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question: question, context: websiteContentContext })
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || `Server responded with status ${response.status}`);
+                }
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates[0].content && result.candidates[0].content.parts[0]) {
+                    oasisAnswer.textContent = result.candidates[0].content.parts[0].text;
+                    answerContainer.classList.remove('hidden');
+                } else {
+                    throw new Error('Invalid response format from AI.');
+                }
+            } catch (error) {
+                console.error('Error fetching answer:', error);
+                qnaErrorMessage.textContent = `Error getting answer: ${error.message}. Please try again.`;
+                qnaErrorMessage.classList.remove('hidden');
+            } finally {
+                // Reset button state
+                qnaLoadingIndicator.classList.add('hidden');
+                buttonText.textContent = "Get Answer";
+                getAnswerBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
